@@ -17,5 +17,19 @@
     alert("Data: " + data + "\nStatus: " + status);
   });
 });
+
+  function handleData( responseData ) {
+
+    // Do what you want with the data
+    console.log(responseData);
+}
+
+$.ajax({
+    url: "hi.php",
+    ...
+    success: function ( data, status, XHR ) {
+        handleData(data);
+    }
+});
 </script>
 </html>
