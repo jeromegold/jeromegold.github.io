@@ -68,8 +68,8 @@
    $.ajax({
    dataType: 'json',
    url: 'https://api.openai.com/v1/assistants',
-   Authorization: 'Bearer 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',
    headers: {
+     'Authorization': "Bearer " + btoa(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),
      'name': 'Medico_gpt_4',
      'instructions' : 'gpt_instruct',
      'model' : 'gpt-4-1106-preview',
