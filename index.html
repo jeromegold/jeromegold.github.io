@@ -9,39 +9,43 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </script>
 <script>
-  $("button").click(function(){
-  $.post("demo_test_post.asp",
-  {
-    name: "Donald Duck",
-    city: "Duckburg"
-  },
-  function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-});
+//   $("button").click(function(){
+//   $.post("demo_test_post.asp",
+//   {
+//     name: "Donald Duck",
+//     city: "Duckburg"
+//   },
+//   function(data, status){
+//     alert("Data: " + data + "\nStatus: " + status);
+//   });
+// });
 
-  function handleData( responseData ) {
+//   function handleData( responseData ) {
 
-    // Do what you want with the data
-    console.log(responseData);
-}
+//     // Do what you want with the data
+//     console.log(responseData);
+// }
 
-$.ajax({
-    url: ""https://api.openai.com/v1/assistants"",
-    ...
-    success: function ( data, status, XHR ) {
-        handleData(data);
-    }
-});
+// $.ajax({
+//     url: ""https://api.openai.com/v1/assistants"",
+//     ...
+//     success: function ( data, status, XHR ) {
+//         handleData(data);
+//     }
+// });
 
   $.ajax({
   dataType: 'json',
-  url: 'https://developers.zomato.com/api/v2.1/cities',
+  url: 'https://api.openai.com/v1/assistants',
   headers: {
-    'user-key': 'put your key in here'
+    'user-key': 'put your key in here',
+    'name'= "Medico_gpt_4",
+    'instructions' = "gpt_instruct",
+    'model'= "gpt-4-1106-preview",
+    'tools' =[{"type": "code_interpreter"}],
   }
   success: function(response, status, xhr) {
-    // Handle the response here.
+   print(response);
   }
 });
 
