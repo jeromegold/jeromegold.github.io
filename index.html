@@ -27,11 +27,22 @@
 }
 
 $.ajax({
-    url: "hi.php",
+    url: ""https://api.openai.com/v1/assistants"",
     ...
     success: function ( data, status, XHR ) {
         handleData(data);
     }
+});
+
+  $.ajax({
+  dataType: 'json',
+  url: 'https://developers.zomato.com/api/v2.1/cities',
+  headers: {
+    'user-key': 'put your key in here'
+  }
+  success: function(response, status, xhr) {
+    // Handle the response here.
+  }
 });
 
   
