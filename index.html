@@ -4,6 +4,7 @@
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
+<button type="button" id="button">Click Me!</button>
 
 <script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -47,7 +48,7 @@
     'tools' =[{"type": "code_interpreter"}],
   }
   success: function(response, status, xhr) {
-   print(response);
+    console.log(response);
   }
 });
 });
