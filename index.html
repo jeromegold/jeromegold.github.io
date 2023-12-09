@@ -34,6 +34,8 @@
 //     }
 // });
 
+  $("button").click(function(e) {
+    e.preventDefault();
   $.ajax({
   dataType: 'json',
   url: 'https://api.openai.com/v1/assistants',
@@ -48,7 +50,7 @@
    print(response);
   }
 });
-
+});
   
 </script>
   
