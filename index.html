@@ -41,11 +41,11 @@
   dataType: 'json',
   url: 'https://api.openai.com/v1/assistants',
   headers: {
-    'user-key': 'put your key in here',
-    'name'= "Medico_gpt_4",
-    'instructions' = "gpt_instruct",
-    'model'= "gpt-4-1106-preview",
-    'tools' =[{"type": "code_interpreter"}],
+   
+    'name': 'Medico_gpt_4',
+    'instructions' : 'gpt_instruct',
+    'model' : 'gpt-4-1106-preview',
+    'tools' : [{"type": "code_interpreter"}],
   }
   success: function(response, status, xhr) {
     console.log(response);
