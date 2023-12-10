@@ -67,7 +67,6 @@
      e.preventDefault();
    $.ajax({
    type: 'POST',
-   dataType: 'json',
    url: 'https://api.openai.com/v1/assistants',
    headers: {
      'Authorization': 'Bearer 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',
@@ -82,7 +81,8 @@
  });
  });
 
-
+    // Content-Type: text/event-stream
+    //  dataType: 'json',
 
 </script>
   
